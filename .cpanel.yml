@@ -1,0 +1,16 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/gigatfst/public_html/lfadmin
+    - /bin/cp -R application $DEPLOYPATH
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R system $DEPLOYPATH
+    - /bin/cp -R update_pack $DEPLOYPATH
+    - /bin/cp -R uploads $DEPLOYPATH
+    - /bin/cp -R index.php $DEPLOYPATH
+    # - cd $DEPLOYPATH
+    # - composer update --no-interaction --prefer-dist --optimize-autoloader
+    # - php artisan migrate --force --seed
+    # - php artisan route:clear
+    # - php artisan view:clear
+    # - php artisan config:clear
